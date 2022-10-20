@@ -5,28 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Card Gallery!</title>
-    <style>
-        * {
-  box-sizing: border-box;
+<style>.row > .column {
+  padding: 0 8px;
 }
 
-        
-          div {
-      margin: auto
-            }
-/* Position the image container (needed to position the left and right arrows) */
-.container {
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
   position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
 }
 
-/* Hide the images by default */
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
 .mySlides {
   display: none;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
 }
 
 /* Next & previous buttons */
@@ -34,13 +72,14 @@
 .next {
   cursor: pointer;
   position: absolute;
-  top: 40%;
+  top: 50%;
   width: auto;
   padding: 16px;
   margin-top: -50px;
   color: white;
   font-weight: bold;
   font-size: 20px;
+  transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
@@ -67,28 +106,15 @@
   top: 0;
 }
 
-/* Container for image text */
+/* Caption text */
 .caption-container {
   text-align: center;
-  background-color: #222;
+  background-color: black;
   padding: 2px 16px;
   color: white;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Six columns side by side */
-.column {
-  float: left;
-  width: 12.5%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
+img.demo {
   opacity: 0.6;
 }
 
@@ -97,44 +123,13 @@
   opacity: 1;
 }
 
-body {
-  margin: 0;
+img.hover-shadow {
+  transition: 0.3s;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 25%;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-}
-
-li a {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-li a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-li a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-}
-.centerimg {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-}
-    </style>
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }</style>
 </head>
 <body>
     <ul>
@@ -142,83 +137,72 @@ li a:hover:not(.active) {
         <li><a class="active" href="cardgallery.html">Card Gallery</a></li>
       </ul>
       <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+          <img src="img_nature.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
 <div class="container">
 
-    <!-- Full-width images with number text -->
+<div id="myModal1" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
     <div class="mySlides">
-      <div class="numbertext">1 / 8</div>
-        <img src="Zeus.png" style="width:33.33%" class="centerimg">
+      <div class="numbertext">1 / 4</div>
+      <img src="Zeus.png" style="width:100%">
     </div>
-  
+
     <div class="mySlides">
-      <div class="numbertext">2 / 8</div>
-        <img src="Brahman.png" style="width:33.33%" class="centerimg">
+      <div class="numbertext">2 / 4</div>
+      <img src="Hades.png" style="width:100%">
     </div>
-  
+
     <div class="mySlides">
-      <div class="numbertext">3 / 8</div>
-        <img src="Yawei & Jesus.png" style="width:33.33%" class="centerimg">
+      <div class="numbertext">3 / 4</div>
+      <img src="Poseidon.png" style="width:100%">
     </div>
+
     <div class="mySlides">
-        <div class="numbertext">4 / 8</div>
-          <img src="Chaos.png" style="width:33.33%" class="centerimg">
-      </div>
-        <div class="mySlides">
-        <div class="numbertext">5 / 8</div>
-          <img src="Hades.png" style="width:33.33%" class="centerimg">
-      </div>
-        <div class="mySlides">
-        <div class="numbertext">6 / 8</div>
-          <img src="Poseidon.png" style="width:33.33%" class="centerimg">
-      </div>
-    <div class="mySlides">
-        <div class="numbertext">7 / 8</div>
-          <img src="Dionysus.png" style="width:33.33%" class="centerimg">
-      </div>
-    <div class="mySlides">
-        <div class="numbertext">8 / 8</div>
-          <img src="Hermes.png" style="width:33.33%" class="centerimg">
-      </div>
-    <!-- Next and previous buttons -->
+      <div class="numbertext">4 / 4</div>
+      <img src="Hera.png" style="width:100%">
+    </div>
+
+    <!-- Next/previous controls -->
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  
-    <!-- Image text -->
+
+    <!-- Caption text -->
     <div class="caption-container">
       <p id="caption"></p>
     </div>
-  
-    <!-- Thumbnail images -->
-    <div class="row">
-      <div class="column" style="margin: auto">
-        <img class="demo cursor" src="Zeus.png" style="width:100%" onclick="currentSlide(1)" alt="Zeus">
-      </div>
-      <div class="column" style="margin: auto">
-        <img class="demo cursor" src="Brahman.png" style="width:100%" onclick="currentSlide(2)" alt="Brahman">
-      </div>
-      <div class="column" style="margin: auto">
-        <img class="demo cursor" src="Yawei & Jesus.png" style="width:100%" onclick="currentSlide(3)" alt="Yawei & Jesus">
-      </div>
-      <div class="column" style="margin: auto">
-        <img class="demo cursor" src="Chaos.png" style="width:100%" onclick="currentSlide(4)" alt="Chaos">
-      </div>
-        <div class="column" style="margin: auto">
-        <img class="demo cursor" src="Hades.png" style="width:100%" onclick="currentSlide(5)" alt="Hades">
-      </div>
-        <div class="column" style="margin: auto">
-        <img class="demo cursor" src="Poseidon.png" style="width:100%" onclick="currentSlide(6)" alt="Poseidon">
-      </div>
-        <div class="column" style="margin: auto">
-        <img class="demo cursor" src="Dionysus.png" style="width:100%" onclick="currentSlide(7)" alt="Dionysus">
-      </div>
-        <div class="column" style="margin: auto">
-        <img class="demo cursor" src="Hermes.png" style="width:100%" onclick="currentSlide(8)" alt="Hermes">
-      </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="Zeus.png" onclick="currentSlide(1)" alt="Zeus">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="Hades.png" onclick="currentSlide(2)" alt="Hades">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="Poseidon.png" onclick="currentSlide(3)" alt="Poseidon">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="Hera.png" onclick="currentSlide(4)" alt="Hera">
     </div>
   </div>
-  </div>
-  <script>
-      let slideIndex = 1;
+</div>
+    <script>
+// Open the Modal
+function openModal1() {
+  document.getElementById("myModal1").style.display = "block";
+}
+
+// Close the Modal
+function closeModal1() {
+  document.getElementById("myModal1").style.display = "none";
+}
+
+var slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -232,10 +216,10 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -248,6 +232,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
-  </script>
+</script>
 </body>
 </html>

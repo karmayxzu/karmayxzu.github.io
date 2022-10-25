@@ -5,235 +5,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Card Gallery!</title>
-<style>.row > .column {
-  padding: 0 8px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Create four equal columns that floats next to eachother */
-.column {
-  float: left;
-  width: 25%;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-}
-
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  width: 90%;
-  max-width: 1200px;
-}
-
-/* The Close Button */
-.close {
-  color: white;
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Hide the slides by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Caption text */
-.caption-container {
-  text-align: center;
-  background-color: black;
-  padding: 2px 16px;
-  color: white;
-}
-
-img.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
-
-img.hover-shadow {
-  transition: 0.3s;
-}
-
-.hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }</style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="cardgallery.html">Card Gallery</a></li>
-      </ul>
-      <div style="margin-left:25%;padding:1px 16px;height:1000px;">
-          <img src="404.png" style="width:100%" onclick="openModal1();currentSlide(1)" class="hover-shadow cursor">
-<div class="container">
-
-<div id="myModal1" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
-
-    <div class="mySlides">
-      <div class="numbertext">1 / 4</div>
-      <img src="Zeus.png" style="width:100%">
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <button class="nav-link active" id="nav-regular-tab" data-bs-toggle="tab" data-bs-target="#regularGodsTab" type="button" role="tab" aria-controls="nav-regular" aria-selected="true">Regular Gods</button>
+      <button class="nav-link" id="nav-orphic-tab" data-bs-toggle="tab" data-bs-target="#orphicGodsTab" type="button" role="tab" aria-controls="nav-orphic" aria-selected="false">Orphic Gods</button>
+      <!-- <button class="nav-link" id="nav-demi-tab" data-bs-toggle="tab" data-bs-target="#demiGodsTab" type="button" role="tab" aria-controls="nav-demi" aria-selected="false">Demigods</button> -->
     </div>
-
-    <div class="mySlides">
-      <div class="numbertext">2 / 4</div>
-      <img src="Hades.png" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">3 / 4</div>
-      <img src="Poseidon.png" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">4 / 4</div>
-      <img src="Hera.png" style="width:100%">
-    </div>
-
-    <!-- Next/previous controls -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <!-- Caption text -->
-    <div class="caption-container">
-      <p id="caption"></p>
-    </div>
-
-    <!-- Thumbnail image controls -->
-    <div class="column">
-      <img class="demo" src="Zeus.png" onclick="currentSlide(1)" alt="Zeus">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="Hades.png" onclick="currentSlide(2)" alt="Hades">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="Poseidon.png" onclick="currentSlide(3)" alt="Poseidon">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="Hera.png" onclick="currentSlide(4)" alt="Hera">
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="regularGodsTab" role="tabpanel" aria-labelledby="nav-regular-tab">
+      <div id="regularGods" class="carousel slide" data-bs-ride="carousel" style="width:30%; margin:auto;" class="tabcontent">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#regularGods" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#regularGods" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#regularGods" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#regularGods" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#regularGods" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#regularGods" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        <button type="button" data-bs-target="#regularGods" data-bs-slide-to="6" aria-label="Slide 7"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="Zeus.png" class="d-block w-100" alt="Zeus">
+        </div>
+        <div class="carousel-item">
+          <img src="Hades.png" class="d-block w-100" alt="Hades">
+        </div>
+        <div class="carousel-item">
+          <img src="Poseidon.png" class="d-block w-100" alt="Poseidon">
+        </div>
+        <div class="carousel-item">
+          <img src="Hephaestus.png" class="d-block w-100" alt="Hephaestus">
+        </div>
+        <div class="carousel-item">
+          <img src="Hera.png" class="d-block w-100" alt="Hera">
+        </div>
+        <div class="carousel-item">
+          <img src="Hermes.png" class="d-block w-100" alt="Hermes">
+        </div>
+        <div class="carousel-item">
+          <img src="Dionysus.png" class="d-block w-100" alt="Dionysus">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#regularGods" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#regularGods" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
-</div>
-    <script>
-// Open the Modal
-function openModal1() {
-  document.getElementById("myModal1").style.display = "block";
-}
+    <div class="tab-pane fade" id="orphicGodsTab" role="tabpanel" aria-labelledby="nav-orphic-tab">
+        <div id="orphicGods" class="carousel slide" data-bs-ride="carousel" style="width:30%; margin:auto;" class="tabcontent">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#orphicGods" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#orphicGods" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Orphic Zeus.png" class="d-block w-100" alt="Zeus">
+      </div>
+      <div class="carousel-item">
+        <img src="Orphic Poseidon.png" class="d-block w-100" alt="Hades">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#orphicGods" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#orphicGods" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+    </div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+  </div>
+  
 
-// Close the Modal
-function closeModal1() {
-  document.getElementById("myModal1").style.display = "none";
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
-</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6650332499545218"
-     crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

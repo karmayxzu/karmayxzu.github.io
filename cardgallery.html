@@ -10,8 +10,9 @@
 <body>
   <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-      <button class="nav-link active" id="nav-regular-tab" data-bs-toggle="tab" data-bs-target="#regularGodsTab" type="button" role="tab" aria-controls="nav-regular" aria-selected="true">Regular Gods</button>
+      <button class="nav-link active" id="nav-regular-tab" data-bs-toggle="tab" data-bs-target="#regularGodsTab" type="button" role="tab" aria-controls="nav-regular" aria-selected="true">Greek Gods</button>
       <button class="nav-link" id="nav-orphic-tab" data-bs-toggle="tab" data-bs-target="#orphicGodsTab" type="button" role="tab" aria-controls="nav-orphic" aria-selected="false">Orphic Gods</button>
+      <button class="nav-link" id="nav-egyptian-tab" data-bs-toggle="tab" data-bs-target="#egyptianTab" type="button" role="tab" aria-controls="nav-egyptian" aria-selected="false">Egyptian Gods</button>
       <!-- <button class="nav-link" id="nav-demi-tab" data-bs-toggle="tab" data-bs-target="#demiGodsTab" type="button" role="tab" aria-controls="nav-demi" aria-selected="false">Demigods</button> -->
       <button class="nav-link" id="nav-tools-tab" data-bs-toggle="tab" data-bs-target="#toolsTab" type="button" role="tab" aria-controls="nav-tools" aria-selected="false">Tools</button>
     </div>
@@ -28,6 +29,8 @@
         <button type="button" data-bs-target="#regularGods" data-bs-slide-to="5" aria-label="Slide 6"></button>
         <button type="button" data-bs-target="#regularGods" data-bs-slide-to="6" aria-label="Slide 7"></button>
         <button type="button" data-bs-target="#regularGods" data-bs-slide-to="7" aria-label="Slide 8"></button>
+        <button type="button" data-bs-target="#regularGods" data-bs-slide-to="8" aria-label="Slide 9"></button>
+        <button type="button" data-bs-target="#regularGods" data-bs-slide-to="9" aria-label="Slide 10"></button>
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -53,6 +56,12 @@
         </div>
         <div class="carousel-item">
           <img src="Athena.png" class="d-block w-100" alt="Athena">
+        </div>
+        <div class="carousel-item">
+          <img src="Helios.png" class="d-block w-100" alt="Helios">
+        </div>
+        <div class="carousel-item">
+          <img src="Apollo.png" class="d-block w-100" alt="Apollo">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#regularGods" data-bs-slide="prev">
@@ -92,7 +101,6 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-    </div>
       <div class="tab-pane fade" id="toolsTab" role="tabpanel" aria-labelledby="nav-tools-tab">
         <div id="tools" class="carousel slide" data-bs-ride="carousel" style="width:30%; margin:auto;" class="tabcontent">
     <div class="carousel-indicators">
@@ -126,6 +134,35 @@
   </div>
     </div>
   </div>
+  <div class="tab-pane fade" id="egyptianTab" role="tabpanel" aria-labelledby="nav-egyptian-tab">
+    <div id="egyptianGods" class="carousel slide" data-bs-ride="carousel" style="width:30%; margin:auto;" class="tabcontent">
+<div class="carousel-indicators">
+  <button type="button" data-bs-target="#egyptianGods" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+  <button type="button" data-bs-target="#egyptianGods" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  <button type="button" data-bs-target="#egyptianGods" data-bs-slide-to="2" aria-label="Slide 3"></button>
+</div>
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <img src="Ra.png" class="d-block w-100" alt="Ra">
+  </div>
+  <div class="carousel-item">
+    <img src="Set.png" class="d-block w-100" alt="Set">
+  </div>
+  <div class="carousel-item">
+    <img src="Khnum.png" class="d-block w-100" alt="Khnum">
+  </div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#egyptianGods" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#egyptianGods" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+</div>
+</div>
+    </div>
   
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

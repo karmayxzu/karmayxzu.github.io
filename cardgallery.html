@@ -10,11 +10,12 @@
 <body>
   <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-      <button class="nav-link active" id="nav-regular-tab" data-bs-toggle="tab" data-bs-target="#regularGodsTab" type="button" role="tab" aria-controls="nav-regular" aria-selected="true">Greek Gods</button>
+      <button class="nav-link active" id="nav-regular-tab" data-bs-toggle="tab" data-bs-target="#regularGodsTab" type="button" role="tab" aria-controls="nav-greek" aria-selected="true">Greek Gods</button>
       <button class="nav-link" id="nav-orphic-tab" data-bs-toggle="tab" data-bs-target="#orphicGodsTab" type="button" role="tab" aria-controls="nav-orphic" aria-selected="false">Orphic Gods</button>
       <button class="nav-link" id="nav-egyptian-tab" data-bs-toggle="tab" data-bs-target="#egyptianTab" type="button" role="tab" aria-controls="nav-egyptian" aria-selected="false">Egyptian Gods</button>
       <!-- <button class="nav-link" id="nav-demi-tab" data-bs-toggle="tab" data-bs-target="#demiGodsTab" type="button" role="tab" aria-controls="nav-demi" aria-selected="false">Demigods</button> -->
       <button class="nav-link" id="nav-tools-tab" data-bs-toggle="tab" data-bs-target="#toolsTab" type="button" role="tab" aria-controls="nav-tools" aria-selected="false">Tools</button>
+      <button class="nav-link" id="nav-joke-tab" data-bs-toggle="tab" data-bs-target="#jokeGodsTab" type="button" role="tab" aria-controls="nav-joke" aria-selected="false">Joke Cards</button>
     </div>
   </nav>
   <div class="tab-content" id="nav-tabContent">
@@ -91,8 +92,8 @@
       <div class="carousel-item">
         <img src="Orphic Hades.png" class="d-block w-100" alt="Hades">
       </div>
-        <div class="carousel-item">
-        <img src="Orphic Hephaestus.png" class="d-block w-100" alt="Hephaestus">
+      <div class="carousel-item">
+        <img src="Orphic Hephaestus.png" class="d-block w-100" alt="Hades">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#orphicGods" data-bs-slide="prev">
@@ -103,6 +104,7 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
+  </div>
   </div>
       <div class="tab-pane fade" id="toolsTab" role="tabpanel" aria-labelledby="nav-tools-tab">
         <div id="tools" class="carousel slide" data-bs-ride="carousel" style="width:30%; margin:auto;" class="tabcontent">
@@ -136,7 +138,6 @@
     </button>
   </div>
     </div>
-  </div>
   <div class="tab-pane fade" id="egyptianTab" role="tabpanel" aria-labelledby="nav-egyptian-tab">
     <div id="egyptianGods" class="carousel slide" data-bs-ride="carousel" style="width:30%; margin:auto;" class="tabcontent">
 <div class="carousel-indicators">
@@ -146,13 +147,13 @@
 </div>
 <div class="carousel-inner">
   <div class="carousel-item active">
-    <img src="Ra.png" class="d-block w-100" alt="Ra">
+    <img src="Ra.png" class="d-block w-100" alt="Zeus">
   </div>
   <div class="carousel-item">
-    <img src="Set.png" class="d-block w-100" alt="Set">
+    <img src="Set.png" class="d-block w-100" alt="Poseidon">
   </div>
   <div class="carousel-item">
-    <img src="Khnum.png" class="d-block w-100" alt="Khnum">
+    <img src="Khnum.png" class="d-block w-100" alt="Hades">
   </div>
 </div>
 <button class="carousel-control-prev" type="button" data-bs-target="#egyptianGods" data-bs-slide="prev">
@@ -165,7 +166,30 @@
 </button>
 </div>
 </div>
-    </div>
+<div class="tab-pane fade" id="jokeGodsTab" role="tabpanel" aria-labelledby="nav-joke-tab">
+  <div id="jokeGods" class="carousel slide" data-bs-ride="carousel" style="width:30%; margin:auto;" class="tabcontent">
+<div class="carousel-indicators">
+<button type="button" data-bs-target="#jokeGods" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+<button type="button" data-bs-target="#jokeGods" data-bs-slide-to="1" aria-label="Slide 2"></button>
+</div>
+<div class="carousel-inner">
+<div class="carousel-item active">
+  <img src="Void Hephaestus.png" class="d-block w-100" alt="Void Hephaestus">
+</div>
+<div class="carousel-item">
+  <img src="Baugette Hephaestus.png" class="d-block w-100" alt="French Hephaestus">
+</div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#jokeGods" data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#jokeGods" data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Next</span>
+</button>
+</div>
+</div>
   
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

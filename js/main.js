@@ -26,9 +26,9 @@ const autoLearnElement = document.getElementById("autoLearn")
 
 const updateSpeed = 20
 
-const baseLifespan = 365 * 90
+const baseLifespan = 365 * 75
 
-const baseGameSpeed = 350
+const baseGameSpeed = 5
 
 const permanentUnlocks = ["Scheduling", "Shop", "Automation", "Quick task display"]
 

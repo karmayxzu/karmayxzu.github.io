@@ -121,7 +121,7 @@ const jobCategories = {
     "Common work": ["Beggar", "Farmer", "Fisherman", "Miner", "Blacksmith", "Merchant"],
     "Military" : ["Squire", "Footman", "Veteran footman", "Knight", "Veteran knight", "Elite knight", "Holy knight", "Legendary knight"],
     "The Arcane Association" : ["Student", "Apprentice mage", "Mage", "Wizard", "Master wizard", "Chairman"],
-    
+    "The Church" : ["Deacon", "Priest", "Bishop", "Archbishop", "Cardinal", "Pope"]
 }
 
 const skillCategories = {

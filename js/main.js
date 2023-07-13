@@ -40,83 +40,101 @@ const jobBaseData = {
     "Blacksmith": {name: "Blacksmith", maxXp: 800, income: 80},
     "Merchant": {name: "Merchant", maxXp: 1600, income: 150},
 
-    "Squire": {name: "Squire", maxXp: 100, income: 5000000},
-    "Footman": {name: "Footman", maxXp: 1000, income: 50000000},
-    "Veteran footman": {name: "Veteran footman", maxXp: 10000, income: 120000000},
-    "Knight": {name: "Knight", maxXp: 100000, income: 300000000},
-    "Veteran knight": {name: "Veteran knight", maxXp: 1000000, income: 1000000000},
-    "Elite knight": {name: "Elite knight", maxXp: 7500000, income: 3000000000},
-    "Holy knight": {name: "Holy knight", maxXp: 40000000, income: 15000000000},
-    "Legendary knight": {name: "Legendary knight", maxXp: 3100000000, income: 500000000000000000},
+    "Squire": {name: "Squire", maxXp: 100, income: 5},
+    "Footman": {name: "Footman", maxXp: 1000, income: 50},
+    "Veteran footman": {name: "Veteran footman", maxXp: 10000, income: 120},
+    "Knight": {name: "Knight", maxXp: 100000, income: 3000},
+    "Veteran knight": {name: "Veteran knight", maxXp: 1000000, income: 10000},
+    "Elite knight": {name: "Elite knight", maxXp: 7500000, income: 30000},
+    "Holy knight": {name: "Holy knight", maxXp: 40000000, income: 150000},
+    "Legendary knight": {name: "Legendary knight", maxXp: 3100000000, income: 500000},
 
-    "Student": {name: "Student", maxXp: 100000, income: 100000},
-    "Apprentice mage": {name: "Apprentice mage", maxXp: 1000000, income: 1000000},
-    "Mage": {name: "Mage", maxXp: 10000000, income: 7500000},
-    "Wizard": {name: "Wizard", maxXp: 100000000, income: 50000000},
-    "Master wizard": {name: "Master wizard", maxXp: 10000000000, income: 250000000},
-    "Chairman": {name: "Chairman", maxXp: 1000000000000, income: 1000000000000000},
+    "Student": {name: "Student", maxXp: 100000, income: 100},
+    "Apprentice mage": {name: "Apprentice mage", maxXp: 1000000, income: 1000},
+    "Mage": {name: "Mage", maxXp: 10000000, income: 7500},
+    "Wizard": {name: "Wizard", maxXp: 100000000, income: 50000},
+    "Master wizard": {name: "Master wizard", maxXp: 10000000000, income: 250000},
+    "Chairman": {name: "Chairman", maxXp: 1000000000000, income: 1000000},
+
+    "Deacon": {name: "Deacon", maxXp: 10000, income: 70},
+    "Priest": {name: "Priest", maxXp: 100000, income: 1200},
+    "Bishop": {name: "Bishop", maxXp: 10000000, income: 12000},
+    "Archbishop": {name: "Arch-bishop", maxXp: 100000000, income: 75000},
+    "Cardinal": {name: "Cardinal", maxXp: 600000000, income: 410000},
+    "Pope": {name: "Pope", maxXp: 1000000000000, income: 3500000},
 }
 
 const skillBaseData = {
-    "Concentration": {name: "Concentration", maxXp: 100, effect: 10000, description: "Skill xp"},
-    "Productivity": {name: "Productivity", maxXp: 100, effect: 10000, description: "Job xp"},
-    "Bargaining": {name: "Bargaining", maxXp: 100, effect: -1000, description: "Expenses"},
-    "Meditation": {name: "Meditation", maxXp: 100, effect: 10000, description: "Happiness"},
+    "Concentration": {name: "Concentration", maxXp: 100, effect: 1.1, description: "Skill xp"},
+    "Productivity": {name: "Productivity", maxXp: 100, effect: 1.1, description: "Job xp"},
+    "Bargaining": {name: "Bargaining", maxXp: 100, effect: -1.01, description: "Expenses"},
+    "Meditation": {name: "Meditation", maxXp: 100, effect: 1.05, description: "Happiness"},
 
-    "Strength": {name: "Strength", maxXp: 100, effect: 10000, description: "Military pay"},
-    "Battle tactics": {name: "Battle tactics", maxXp: 100, effect: 10000, description: "Military xp"},
-    "Muscle memory": {name: "Muscle memory", maxXp: 100, effect: 10000, description: "Strength xp"},
+    "Strength": {name: "Strength", maxXp: 100, effect: 1, description: "Military pay"},
+    "Battle tactics": {name: "Battle tactics", maxXp: 100, effect: 1, description: "Military xp"},
+    "Muscle memory": {name: "Muscle memory", maxXp: 100, effect: 1, description: "Strength xp"},
 
-    "Mana control": {name: "Mana control", maxXp: 100, effect: 10000, description: "T.A.A. xp"},
-    "Immortality": {name: "Immortality", maxXp: 100, effect: 10000, description: "Longer lifespan"},
-    "Time warping": {name: "Time warping", maxXp: 100, effect: 1000000, description: "Gamespeed"},
-    "Super immortality": {name: "Super immortality", maxXp: 100, effect: 20000, description: "Longer lifespan"},
+    "Mana control": {name: "Mana control", maxXp: 100, effect: 1.1, description: "T.A.A. xp"},
+    "Immortality": {name: "Immortality", maxXp: 100, effect: 1.05, description: "Longer lifespan"},
+    "Time warping": {name: "Time warping", maxXp: 100, effect: 1, description: "Gamespeed"},
+    "Super immortality": {name: "Forbidden technique", maxXp: 1000, effect: 3, description: "Longer lifespan"},
 
-    "Dark influence": {name: "Dark influence", maxXp: 100, effect: 10000, description: "All xp"},
-    "Evil control": {name: "Evil control", maxXp: 100, effect: 10000, description: "Evil gain"},
-    "Intimidation": {name: "Intimidation", maxXp: 100, effect: -100000, description: "Expenses"},
-    "Demon training": {name: "Demon training", maxXp: 100, effect: 10000, description: "All xp"},
-    "Blood meditation": {name: "Blood meditation", maxXp: 100, effect: 10000, description: "Evil gain"},
-    "Demon's wealth": {name: "Demon's wealth", maxXp: 100, effect: 200000, description: "Job pay"},
+    "Worship": {name: "Worship", maxXp: 100, effect: 1.1, description: "Religion xp"},
+    "Scripture": {name: "Scripture", maxXp: 100, effect: 1.01, description: "Job pay"},
+    "Word of God": {name: "Word of God", maxXp: 100, effect: 1.1, description: "Longer lifespan"},
+    "Holy magic": {name: "Holy magic", maxXp: 100, effect: 1.01, description: "All xp"},
+
+    "Dark influence": {name: "Dark influence", maxXp: 100, effect: 1.05, description: "All xp"},
+    "Evil control": {name: "Evil control", maxXp: 100, effect: 1.01, description: "Evil gain"},
+    "Intimidation": {name: "Intimidation", maxXp: 100, effect: -1.1, description: "Expenses"},
+    "Demon training": {name: "Demon training", maxXp: 100, effect: 1.1, description: "All xp"},
+    "Blood meditation": {name: "Blood meditation", maxXp: 100, effect: 1.02, description: "Evil gain"},
+    "Demon's wealth": {name: "Demon's wealth", maxXp: 100, effect: 1.02, description: "Job pay"},
     
 }
 
 const itemBaseData = {
-    "Homeless": {name: "Homeless", expense: 0, effect: 100},
-    "Tent": {name: "Tent", expense: 15, effect: 140.4},
-    "Wooden hut": {name: "Wooden hut", expense: 100, effect: 200},
-    "Cottage": {name: "Cottage", expense: 750, effect: 300.5},
-    "House": {name: "House", expense: 3000, effect: 600},
-    "Large house": {name: "Large house", expense: 25000, effect: 1200},
-    "Small palace": {name: "Small palace", expense: 300000, effect: 2500},
-    "Grand palace": {name: "Grand palace", expense: 5000000, effect: 6000},
+    "Homeless": {name: "Homeless", expense: 0, effect: 1},
+    "Tent": {name: "Tent", expense: 15, effect: 1.4},
+    "Wooden hut": {name: "Wooden hut", expense: 100, effect: 2},
+    "Cottage": {name: "Cottage", expense: 750, effect: 3.5},
+    "House": {name: "House", expense: 3000, effect: 6},
+    "Large house": {name: "Large house", expense: 25000, effect: 12},
+    "Small palace": {name: "Small palace", expense: 300000, effect: 25},
+    "Grand palace": {name: "Grand palace", expense: 5000000, effect: 60},
+    "Castle": {name: "Castle", expense: 12000000, effect: 114},
+    "Palace of God": {name: "Palace of God", expense: 50000000, effect: 180},
 
-    "Book": {name: "Book", expense: 10, effect: 10.5, description: "Skill xp"},
-    "Dumbbells": {name: "Dumbbells", expense: 50, effect: 10.5, description: "Strength xp"},
-    "Personal squire": {name: "Personal squire", expense: 200, effect: 20, description: "Job xp"},
-    "Steel longsword": {name: "Steel longsword", expense: 1000, effect: 20, description: "Military xp"},
-    "Butler": {name: "Butler", expense: 7500, effect: 10.5, description: "Happiness"},
-    "Sapphire charm": {name: "Sapphire charm", expense: 50000, effect: 30, description: "Magic xp"},
-    "Study desk": {name: "Study desk", expense: 1000000, effect: 20, description: "Skill xp"},
-    "Library": {name: "Library", expense: 10000000, effect: 100.5, description: "Skill xp"},
+    "Book": {name: "Book", expense: 10, effect: 1.5, description: "Skill xp"},
+    "Dumbbells": {name: "Dumbbells", expense: 50, effect: 1.5, description: "Strength xp"},
+    "Personal squire": {name: "Personal squire", expense: 200, effect: 2.0, description: "Job xp"},
+    "Steel longsword": {name: "Steel longsword", expense: 1080, effect: 2.5, description: "Military xp"},
+    "Bible": {name: "Bible", expense: 3500, effect: 1.5, description: "Religion xp"},
+    "Butler": {name: "Butler", expense: 7500, effect: 1.5, description: "Happiness"},
+    "Sapphire charm": {name: "Sapphire charm", expense: 50000, effect: 3, description: "Magic xp"},
+    "Study desk": {name: "Study desk", expense: 1000000, effect: 2, description: "Skill xp"},
+    "Library": {name: "Library", expense: 10000000, effect: 1.5, description: "Skill xp"},
+    "Church": {name: "Church", expense: 35000000, effect: 2.5, description: "Religion xp"},
 }
 
 const jobCategories = {
     "Common work": ["Beggar", "Farmer", "Fisherman", "Miner", "Blacksmith", "Merchant"],
     "Military" : ["Squire", "Footman", "Veteran footman", "Knight", "Veteran knight", "Elite knight", "Holy knight", "Legendary knight"],
     "The Arcane Association" : ["Student", "Apprentice mage", "Mage", "Wizard", "Master wizard", "Chairman"]
+    "The Church" : ["Deacon", "Priest", "Bishop", "Archbishop", "Cardinal", "Pope"]
 }
 
 const skillCategories = {
     "Fundamentals": ["Concentration", "Productivity", "Bargaining", "Meditation"],
     "Combat": ["Strength", "Battle tactics", "Muscle memory"],
     "Magic": ["Mana control", "Immortality", "Time warping", "Super immortality"],
+    "Light magic": ["Worship", "Scripture", "Word of God", "Holy magic"],
     "Dark magic": ["Dark influence", "Evil control", "Intimidation", "Demon training", "Blood meditation", "Demon's wealth"]
 }
 
 const itemCategories = {
     "Properties": ["Homeless", "Tent", "Wooden hut", "Cottage", "House", "Large house", "Small palace", "Grand palace"],
-    "Misc": ["Book", "Dumbbells", "Personal squire", "Steel longsword", "Butler", "Sapphire charm", "Study desk", "Library"]
+    "Misc": ["Book", "Dumbbells", "Personal squire", "Steel longsword", "Bible", "Butler", "Sapphire charm", "Study desk", "Library", "Church"]
 }
 
 const headerRowColors = {
@@ -126,6 +144,7 @@ const headerRowColors = {
     "Fundamentals": "#4a4e69",
     "Combat": "#ff704d",
     "Magic": "#875F9A",
+    "Light magic": "#e8d2a0",
     "Dark magic": "#73000f",
     "Properties": "#219ebc",
     "Misc": "#b56576",
@@ -155,6 +174,13 @@ const tooltips = {
     "Master wizard": "Blessed with unparalleled talent, perform unbelievable feats with magic at will. It is said that a master wizard has enough destructive power to wipe an empire off the map.",
     "Chairman": "Spend your days administrating The Arcane Association and investigate the concepts of true immortality. The chairman receives ludicrous amounts of pay daily.",
 
+    "Deacon": "Assist your priest during his ceremonies. Small pay but a necessary stage in becoming an avatar of holy magic.",
+    "Priest": "Under the supervision of a bishop, manage a church and perform ceremonies. Decent pay will be provided for upkeep of the church and living costs.",
+    "Bishop": "Oversee many churches and teach priests and deacons of holy ceremonies. Only a small amount of priests are considered for this role and are rewarded with a very high pay.",
+    "Archbishop": "Utilise holy magic to keep the entire religious system in check, and supervise the bishops. Only a tiny percentage of bishops deserve to attain this role and are rewarded with an insanely high pay.",
+    "Cardinal": "Cardinals are extraordinarily noble bishops that have about the same power as an archbishop. Perform holy rituals to create the next pope and holy avatar of God.",
+    "Pope": "Spend your days as the avatar of God and administrating the Church. Also learn of the concepts of godly magic. The pope receives ludicrous amounts of pay daily.",
+
     "Concentration": "Improve your learning speed through practising intense concentration activities.",
     "Productivity": "Learn to procrastinate less at work and receive more job experience per day.",
     "Bargaining": "Study the tricks of the trade and persuasive skills to lower any type of expense.",
@@ -168,6 +194,11 @@ const tooltips = {
     "Immortality": "Lengthen your lifespan through the means of magic. However, is this truly the immortality you have tried seeking for...?",
     "Time warping": "Bend space and time through forbidden techniques, resulting in a faster gamespeed.",
     "Super immortality": "Through harnessing ancient, forbidden techniques, lengthen your lifespan drastically beyond comprehension.",
+
+    "Worship": "Worship the legendary God and learn more of His magic.",
+    "Scripture": "Investigate many sacred books and learn of holy magic, which is used to increase the worthiness of the coins you recieve from your job.",
+    "Word of God": "Using holy magic, lengthen your lifespan to assist with your techniques.",
+    "Holy magic": "Through harnessing ancient magic from the Immaculate Conception, store the knowledge you have learned in a personal storage space in Heaven, allowing you to absorb knowledge rapidly.",
 
     "Dark influence": "Encompass yourself with formidable power bestowed upon you by evil, allowing you to pick up and absorb any job or skill with ease.",
     "Evil control": "Tame the raging and growing evil within you, improving evil gain in-between rebirths.",
@@ -184,18 +215,22 @@ const tooltips = {
     "Large house": "Much larger than a regular house, which boasts even more rooms and multiple floors. The building is quite spacious but comes with a hefty price tag.",
     "Small palace": "A very rich and meticulously built structure rimmed with fine metals such as silver. Extremely high expenses to maintain for a lavish lifestyle.",
     "Grand palace": "A grand residence completely composed of gold and silver. Provides the utmost luxurious and comfortable living conditions possible for a ludicrous price.",
+    "Castle": "A fortified kingdom of many riches. Extremely high expenses to maintain the kingdom to continue living in such a royal way.",
+    "Palace of God": "The most luxurious and holy palace of all, this is the one palace to rule them all.",
 
     "Book": "A place to write down all your thoughts and discoveries, allowing you to learn a lot more quickly.",
     "Dumbbells": "Heavy tools used in strenuous exercise to toughen up and accumulate strength even faster than before. ",
     "Personal squire": "Assists you in completing day to day activities, giving you more time to be productive at work.",
     "Steel longsword": "A fine blade used to slay enemies even quicker in combat and therefore gain more experience.",
+    "Bible": "A sacred book that contains more advanced holy magic. It allows you to learn holy magic much faster.",
     "Butler": "Keeps your household clean at all times and also prepares three delicious meals per day, leaving you in a happier, stress-free mood.",
     "Sapphire charm": "Embedded with a rare sapphire, this charm activates more mana channels within your body, providing a much easier time learning magic.",
     "Study desk": "A dedicated area which provides many fine stationary and equipment designed for furthering your progress in research.",
     "Library": "Stores a collection of books, each containing vast amounts of information from basic life skills to complex magic spells.",
+    "Church": "A holy structure to teach the Word of God. Inside, massive reserves of holy magic are conjured within.",
 }
 
-const units = ["", "k", "M", "B", "T", "q", "Q", "Sx", "Sp", "Oc", "N", "Dc", "Un", "Duo", "Tre", "Qua", "Qui", "Sxd", "Spd", "Ocd", "Nod", "Vg", "Uvg", "Dvg", "Tvg", "Qavg", "Qivg", "Sxvg", "Spvg", "Ocvg", "Nvg"];
+const units = ["", "k", "M", "B", "T", "q", "Q", "Sx", "Sp", "Oc", "N", "Dc", "Und", "Duo", "Td", "Qa", "Qi", "Sxd", "Spd", "Ocd", "Nod", "Vg", "Uvg", "Dvg", "Tvg", "Qavg", "Qivg", "Sxvg", "Spvg", "Ocvg", "Nvg", "Unvg", "Dvg", "Tvg", "Qavg", "Qivg"];
 
 const jobTabButton = document.getElementById("jobTabButton")
 

@@ -59,7 +59,7 @@ const jobBaseData = {
     "Deacon": {name: "Deacon", maxXp: 10000, income: 70},
     "Priest": {name: "Priest", maxXp: 100000, income: 1200},
     "Bishop": {name: "Bishop", maxXp: 10000000, income: 12000},
-    "Archbishop": {name: "Arch-bishop", maxXp: 100000000, income: 75000},
+    "Archbishop": {name: "Archbishop", maxXp: 100000000, income: 75000},
     "Cardinal": {name: "Cardinal", maxXp: 600000000, income: 410000},
     "Pope": {name: "Pope", maxXp: 1000000000000, income: 3500000},
 }

@@ -133,7 +133,7 @@ const skillCategories = {
 }
 
 const itemCategories = {
-    "Properties": ["Homeless", "Tent", "Wooden hut", "Cottage", "House", "Large house", "Small palace", "Grand palace"],
+    "Properties": ["Homeless", "Tent", "Wooden hut", "Cottage", "House", "Large house", "Small palace", "Grand palace", "Castle", "Palace of God"],
     "Misc": ["Book", "Dumbbells", "Personal squire", "Steel longsword", "Bible", "Butler", "Sapphire charm", "Study desk", "Library", "Church"]
 }
 

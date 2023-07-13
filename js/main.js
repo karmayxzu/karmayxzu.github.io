@@ -1145,6 +1145,12 @@ gameData.requirements = {
     "Time warping": new TaskRequirement([getTaskElement("Time warping")], [{task: "Mage", requirement: 1}]),
     "Super immortality": new TaskRequirement([getTaskElement("Super immortality")], [{task: "Chairman", requirement: 1}]),
 
+    //Light magic
+    "Worship": new TaskRequirement([getTaskElement("Worship")], [{task: "Mana control", requirement: 2}, {task: "Meditation", requirement: 5}]),
+    "Scripture": new TaskRequirement([getTaskElement("Scripture")], [{task: "Worship", requirement: 3}]),
+    "Word of God": new TaskRequirement([getTaskElement("Time warping")], [{task: "Bishop", requirement: 1}]),
+    "Holy magic": new TaskRequirement([getTaskElement("Holy magic")], [{task: "Pope", requirement: 1}, {task: "Word of God", requirement: 2.5}]),
+
     //Dark magic
     "Dark influence": new EvilRequirement([getTaskElement("Dark influence")], [{requirement: 1}]),
     "Evil control": new EvilRequirement([getTaskElement("Evil control")], [{requirement: 1}]),

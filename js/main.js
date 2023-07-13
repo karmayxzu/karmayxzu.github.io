@@ -1159,7 +1159,7 @@ gameData.requirements = {
     "Worship": new TaskRequirement([getTaskElement("Worship")], [{task: "Mana control", requirement: 2}, {task: "Meditation", requirement: 5}]),
     "Scripture": new TaskRequirement([getTaskElement("Scripture")], [{task: "Worship", requirement: 3}]),
     "Word of God": new TaskRequirement([getTaskElement("Time warping")], [{task: "Bishop", requirement: 1}]),
-    "Holy magic": new TaskRequirement([getTaskElement("Holy magic")], [{task: "Pope", requirement: 1}, {task: "Word of God", requirement: 2.5}]),
+    "Holy magic": new TaskRequirement([getTaskElement("Holy magic")], [{task: "Pope", requirement: 1}, {task: "Word of God", requirement: 2}]),
 
     //Dark magic
     "Dark influence": new EvilRequirement([getTaskElement("Dark influence")], [{requirement: 1}]),

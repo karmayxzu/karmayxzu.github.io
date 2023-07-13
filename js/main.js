@@ -141,6 +141,7 @@ const headerRowColors = {
     "Common work": "#55a630",
     "Military": "#e63946",
     "The Arcane Association": "#C71585",
+    "The Church": "#e8d2a0",
     "Fundamentals": "#4a4e69",
     "Combat": "#ff704d",
     "Magic": "#875F9A",
@@ -1091,6 +1092,7 @@ gameData.currentMisc = []
 gameData.requirements = {
     //Other
     "The Arcane Association": new TaskRequirement(getElementsByClass("The Arcane Association"), [{task: "Concentration", requirement: 200}, {task: "Meditation", requirement: 200}]),
+    "The Church": new TaskRequirement(getElementsByClass("The Church"), [{task: "Mana control", requirement: 200}, {task: "Meditation", requirement: 500}]),
     "Dark magic": new EvilRequirement(getElementsByClass("Dark magic"), [{requirement: 1}]),
     "Shop": new CoinRequirement([document.getElementById("shopTabButton")], [{requirement: gameData.itemData["Tent"].getExpense() * 50}]),
     "Rebirth tab": new AgeRequirement([document.getElementById("rebirthTabButton")], [{requirement: 25}]),

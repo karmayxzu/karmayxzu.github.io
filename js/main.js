@@ -1128,6 +1128,14 @@ gameData.requirements = {
     "Master wizard": new TaskRequirement([getTaskElement("Master wizard")], [{task: "Mana control", requirement: 15}, {task: "Wizard", requirement: 1}]),
     "Chairman": new TaskRequirement([getTaskElement("Chairman")], [{task: "Mana control", requirement: 20}, {task: "Master wizard", requirement: 10}]),
 
+    //The Church
+    "Deacon": new TaskRequirement([getTaskElement("Deacon")], [{task: "Meditation", requirement: 5}]),
+    "Priest": new TaskRequirement([getTaskElement("Priest")], [{task: "Worship", requirement: 3}, {task: "Deacon", requirement: 1}]),
+    "Bishop": new TaskRequirement([getTaskElement("Bishop")], [{task: "Worship", requirement: 7}, {task: "Scripture", requirement: 3}, {task: "Priest", requirement: 1}]),
+    "Archbishop": new TaskRequirement([getTaskElement("Archbishop")], [{task: "Worship", requirement: 8}, {task: "Scripture", requirement: 5}, {task: "Bishop", requirement: 1}]),
+    "Cardinal": new TaskRequirement([getTaskElement("Cardinal")], [{task: "Worship", requirement: 11}, {task: "Meditation", requirement: 8}, {task: "Scripture", requirement: 7}, {task: "Archbishop", requirement: 1}]),
+    "Chairman": new TaskRequirement([getTaskElement("Chairman")], [{task: "Worship", requirement: 16}, {task: "Meditation", requirement: 8}, {task: "Word of God", requirement: 2}, {task: "Scripture", requirement: 10}, {task: "Cardinal", requirement: 1}]),
+
     //Fundamentals
     "Concentration": new TaskRequirement([getTaskElement("Concentration")], []),
     "Productivity": new TaskRequirement([getTaskElement("Productivity")], [{task: "Concentration", requirement: 1}]),
@@ -1168,16 +1176,20 @@ gameData.requirements = {
     "Large house": new CoinRequirement([getItemElement("Large house")], [{requirement: gameData.itemData["Large house"].getExpense() * 100}]),
     "Small palace": new CoinRequirement([getItemElement("Small palace")], [{requirement: gameData.itemData["Small palace"].getExpense() * 100}]),
     "Grand palace": new CoinRequirement([getItemElement("Grand palace")], [{requirement: gameData.itemData["Grand palace"].getExpense() * 100}]),
+    "Castle": new CoinRequirement([getItemElement("Castle")], [{requirement: gameData.itemData["Castle"].getExpense() * 80}]),
+    "Palace of God": new CoinRequirement([getItemElement("Palace of God")], [{requirement: gameData.itemData["Palace of God"].getExpense() * 50}]),
 
     //Misc
     "Book": new CoinRequirement([getItemElement("Book")], [{requirement: 0}]),
     "Dumbbells": new CoinRequirement([getItemElement("Dumbbells")], [{requirement: gameData.itemData["Dumbbells"].getExpense() * 100}]),
     "Personal squire": new CoinRequirement([getItemElement("Personal squire")], [{requirement: gameData.itemData["Personal squire"].getExpense() * 100}]),
     "Steel longsword": new CoinRequirement([getItemElement("Steel longsword")], [{requirement: gameData.itemData["Steel longsword"].getExpense() * 100}]),
+    "Bible": new CoinRequirement([getItemElement("Bible")], [{requirement: gameData.itemData["Bible"].getExpense() * 100}]),
     "Butler": new CoinRequirement([getItemElement("Butler")], [{requirement: gameData.itemData["Butler"].getExpense() * 100}]),
     "Sapphire charm": new CoinRequirement([getItemElement("Sapphire charm")], [{requirement: gameData.itemData["Sapphire charm"].getExpense() * 100}]),
     "Study desk": new CoinRequirement([getItemElement("Study desk")], [{requirement: gameData.itemData["Study desk"].getExpense() * 100}]),
     "Library": new CoinRequirement([getItemElement("Library")], [{requirement: gameData.itemData["Library"].getExpense() * 100}]), 
+    "Church": new CoinRequirement([getItemElement("Church")], [{requirement: gameData.itemData["Church"].getExpense() * 70}]),
 }
 
 tempData["requirements"] = {}

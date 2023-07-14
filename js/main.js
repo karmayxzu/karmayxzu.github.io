@@ -210,7 +210,7 @@ const tooltips = {
     "Blood meditation": "Grow and culture the evil within you through the sacrifise of other living beings, drastically increasing evil gain.",
     "Demon's wealth": "Through the means of dark magic, multiply the raw matter of the coins you receive from your job.",
     "Soul stealing": "Utilizing evil spells, steal the lifespan of other humans, drastically increasing your own lifespan.",
-    "Soul stealing": "Manifest the power and knowledge of the Demon Emperor Lucif, allowing you to learn spells that would kill an ordinary demon..",
+    "Lucif's magic": "Manifest the power and knowledge of the Demon Emperor Lucif, allowing you to learn spells that would kill an ordinary demon..",
 
     "Homeless": "Sleep on the uncomfortable, filthy streets while almost freezing to death every night. It cannot get any worse than this.",
     "Tent": "A thin sheet of tattered cloth held up by a couple of feeble, wooden sticks. Horrible living conditions but at least you have a roof over your head.",

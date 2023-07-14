@@ -1152,18 +1152,18 @@ gameData.requirements = {
     "Strength": new TaskRequirement([getTaskElement("Strength")], []),
     "Battle tactics": new TaskRequirement([getTaskElement("Battle tactics")], [{task: "Concentration", requirement: 2}]),
     "Muscle memory": new TaskRequirement([getTaskElement("Muscle memory")], [{task: "Concentration", requirement: 3}, {task: "Strength", requirement: 3}]),
-
-    //Magic
-    "Mana control": new TaskRequirement([getTaskElement("Mana control")], [{task: "Concentration", requirement: 2}, {task: "Meditation", requirement: 2}]),
-    "Immortality": new TaskRequirement([getTaskElement("Immortality")], [{task: "Apprentice mage", requirement: 1}]),
-    "Time warping": new TaskRequirement([getTaskElement("Time warping")], [{task: "Mage", requirement: 1}]),
-    "Super immortality": new TaskRequirement([getTaskElement("Super immortality")], [{task: "Chairman", requirement: 1}]),
-
+    
     //Light magic
     "Worship": new TaskRequirement([getTaskElement("Worship")], [{task: "Mana control", requirement: 2}, {task: "Meditation", requirement: 5}]),
     "Scripture": new TaskRequirement([getTaskElement("Scripture")], [{task: "Worship", requirement: 3}]),
     "Word of God": new TaskRequirement([getTaskElement("Time warping")], [{task: "Bishop", requirement: 1}]),
     "Holy magic": new TaskRequirement([getTaskElement("Holy magic")], [{task: "Pope", requirement: 1}, {task: "Word of God", requirement: 2}]),
+    
+    //Magic
+    "Mana control": new TaskRequirement([getTaskElement("Mana control")], [{task: "Concentration", requirement: 2}, {task: "Meditation", requirement: 2}]),
+    "Immortality": new TaskRequirement([getTaskElement("Immortality")], [{task: "Apprentice mage", requirement: 1}]),
+    "Time warping": new TaskRequirement([getTaskElement("Time warping")], [{task: "Mage", requirement: 1}]),
+    "Super immortality": new TaskRequirement([getTaskElement("Super immortality")], [{task: "Chairman", requirement: 1}]),
 
     //Dark magic
     "Dark influence": new EvilRequirement([getTaskElement("Dark influence")], [{requirement: 1}]),

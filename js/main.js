@@ -81,7 +81,7 @@ const skillBaseData = {
 
     "Worship": {name: "Worship", maxXp: 100, effect: 0.01, description: "Religion xp"},
     "Scripture": {name: "Scripture", maxXp: 100, effect: 0.001, description: "Job pay"},
-    "Word of God": {name: "Word of God", maxXp: 100, effect: 0.02, description: "Longer lifespan"},
+    "Word of God": {name: "Word of God", maxXp: 100, effect: 0.015, description: "Longer lifespan"},
     "Holy magic": {name: "Holy magic", maxXp: 100, effect: 0.01, description: "All xp"},
 
     "Dark influence": {name: "Dark influence", maxXp: 100, effect: 0.01, description: "All xp"},
@@ -90,6 +90,8 @@ const skillBaseData = {
     "Demon training": {name: "Demon training", maxXp: 100, effect: 0.1, description: "All xp"},
     "Blood meditation": {name: "Blood meditation", maxXp: 100, effect: 0.02, description: "Evil gain"},
     "Demon's wealth": {name: "Demon's wealth", maxXp: 100, effect: 0.009, description: "Job pay"},
+    "Soul stealing": {name: "Soul stealing", maxXp: 100, effect: 0.03, description: "Longer lifespan"},
+    "Lucif's magic": {name: "Lucif's magic", maxXp: 100, effect: 0.42, description: "All xp"},
     
 }
 
@@ -129,7 +131,7 @@ const skillCategories = {
     "Combat": ["Strength", "Battle tactics", "Muscle memory"],
     "Magic": ["Mana control", "Immortality", "Time warping", "Super immortality"],
     "Light magic": ["Worship", "Scripture", "Word of God", "Holy magic"],
-    "Dark magic": ["Dark influence", "Evil control", "Intimidation", "Demon training", "Blood meditation", "Demon's wealth"]
+    "Dark magic": ["Dark influence", "Evil control", "Intimidation", "Demon training", "Blood meditation", "Demon's wealth", "Soul stealing", "Lucif's magic"]
 }
 
 const itemCategories = {
@@ -207,6 +209,8 @@ const tooltips = {
     "Demon training": "A mere human body is too feeble and weak to withstand evil. Train with forbidden methods to slowly manifest into a demon, capable of absorbing knowledge rapidly.",
     "Blood meditation": "Grow and culture the evil within you through the sacrifise of other living beings, drastically increasing evil gain.",
     "Demon's wealth": "Through the means of dark magic, multiply the raw matter of the coins you receive from your job.",
+    "Soul stealing": "Utilizing evil spells, steal the lifespan of other humans, drastically increasing your own lifespan.",
+    "Soul stealing": "Manifest the power and knowledge of the Demon Emperor Lucif, allowing you to learn spells that would kill an ordinary demon..",
 
     "Homeless": "Sleep on the uncomfortable, filthy streets while almost freezing to death every night. It cannot get any worse than this.",
     "Tent": "A thin sheet of tattered cloth held up by a couple of feeble, wooden sticks. Horrible living conditions but at least you have a roof over your head.",
@@ -1168,6 +1172,8 @@ gameData.requirements = {
     "Demon training": new EvilRequirement([getTaskElement("Demon training")], [{requirement: 2.5}]),
     "Blood meditation": new EvilRequirement([getTaskElement("Blood meditation")], [{requirement: 3}]),
     "Demon's wealth": new EvilRequirement([getTaskElement("Demon's wealth")], [{requirement: 5}]),
+    "Soul stealing": new EvilRequirement([getTaskElement("Soul stealing")], [{requirement: 10}]),
+    "Lucif's power": new EvilRequirement([getTaskElement("Lucif's power")], [{requirement: 15}]),
 
     //Properties
     "Homeless": new CoinRequirement([getItemElement("Homeless")], [{requirement: 0}]),
